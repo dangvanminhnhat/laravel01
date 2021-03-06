@@ -17,7 +17,7 @@ class CreateCommentTable extends Migration
             $table->id();
             $table->string("name");
             $table->string("email");
-            $table->integer("content");  
+            $table->string("content");  
             $table->unsignedBigInteger("tin_id");
             $table->foreign("tin_id")->references("id")->on("tin")->onDelete('cascade');
             $table->timestamps();
