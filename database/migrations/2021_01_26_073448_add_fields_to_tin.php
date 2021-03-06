@@ -27,8 +27,8 @@ class AddFieldsToTin extends Migration
     public function down()
     {
         Schema::table('tin', function (Blueprint $table) {
-            Schema::dropColumn('url_anh');
-            Schema::dropColumn('tin_noi_bat');
+            Schema::dropIfExists('url_anh');
+            Schema::dropIfExists('tin_noi_bat');
         });
     }
 }
